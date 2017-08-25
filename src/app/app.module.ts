@@ -9,6 +9,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AddPage } from '../pages/add/add';
 
 //IMPORTANTE
 //menção aos sites onde encontrei o conhecimento
@@ -31,6 +32,7 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
+    AddPage,
     HomePage
   ],
   imports: [
@@ -44,6 +46,7 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    AddPage,
     HomePage
   ],
   providers: [

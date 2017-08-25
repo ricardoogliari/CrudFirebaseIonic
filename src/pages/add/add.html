@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Nova Pessoa
+    </ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+        <ion-label>Nome</ion-label>
+        <ion-input [(ngModel)]="nome" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Idade</ion-label>
+        <ion-input [(ngModel)]="idade" type="number"></ion-input>
+    </ion-item>
+
+    <button ion-button color="dark" outline block (click)="salvar()">Salvar</button>
+</ion-content>

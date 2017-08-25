@@ -3,7 +3,13 @@
     <ion-title>
       Ionic Blank
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="addPerson()">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+  
 </ion-header>
 
 <ion-content padding>
@@ -11,7 +17,7 @@
     <!--a lista será lida automaticamente
     do firebase, depois disso o Angular se
     encarrega do resto -->
-    <button ion-item *ngFor="let item of items | async">
+    <button ion-item *ngFor="let item of items | async" (click)="clique(item)">
       {{ item.nome }} - {{ item.idade }}
     </button> 
   </ion-list>
