@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Pessoas
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only color="royal" (click)="addPerson()">
@@ -17,7 +17,7 @@
     <!--a lista será lida automaticamente
     do firebase, depois disso o Angular se
     encarrega do resto -->
-    <button ion-item *ngFor="let item of items | async" (click)="clique(item)">
+    <button ion-item *ngFor="let item of items | async; let i = index;" (click)="clique(item, i)">
       {{ item.nome }} - {{ item.idade }}
     </button> 
   </ion-list>
